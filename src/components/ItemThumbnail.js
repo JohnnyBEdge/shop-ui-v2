@@ -32,7 +32,12 @@ const useStyles = makeStyles(() => ({
         alignItems: "center",
         transition: "all .1s ease-in-out",
         color: "rgb(45, 42, 42)",
+
+        "&:hover": {
+            transform: "scale(1.1)"
+        },
     },
+ 
     itemName: {
         padding: 0,
         margin: 5,
