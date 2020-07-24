@@ -49,9 +49,9 @@ const Avatar = () => {
                     aria-haspopup="true" 
                     onClick={handleClick} 
                     fontSize={'large'}/>
-                    <Link to="/cart">
+                    {/* <Link to="/cart"> */}
                         <ShoppingCartOutlinedIcon />
-                    </Link>
+                    {/* </Link> */}
                 <Menu
                     id="avatar-menu"
                     anchorEl={anchorEl}
@@ -59,7 +59,6 @@ const Avatar = () => {
                     open={Boolean(anchorEl)}
                     onClose={handleClose}
                 >
-                    {/* {admin} */}
                     <MenuItem 
                         onClick={handleClose}
                         >Profile
