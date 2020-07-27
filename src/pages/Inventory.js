@@ -14,8 +14,8 @@ const Inventory = () => {
 
     const handleSelected = (item) => {
         localStorage.setItem('selected', JSON.stringify(item))
-    }
-    // let { id } = useParams();
+    };
+    
     const item = inventory.map((item) => {
         return <Link 
                     to={{
@@ -23,7 +23,6 @@ const Inventory = () => {
                     }}
                     onClick={() => handleSelected(item)} 
                     key={item._id}>
-        {/* // <Link to={`item/${item._id}`} onClick={() => handleSelected(item)} key={item._id}> */}
                 <div><ItemThumbnail item={item}/></div>
                 
             </Link>
