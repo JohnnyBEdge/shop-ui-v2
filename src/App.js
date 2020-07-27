@@ -11,7 +11,8 @@ import {ItemContext} from './context/item-context';
 
 
 import {
-  BrowserRouter as Router,
+  // BrowserRouter as Router,
+  HashRouter,
   Switch,
   Route,
   Redirect
@@ -77,7 +78,8 @@ const App = () => {
       <LoginStatus.Provider value={{loginStatus, setLoginStatus}}>
       <div className="App">
         
-        <Router>
+        <HashRouter basename={process.env.PUBLIC_URL}>
+        {/* <Router> */}
           <Nav />
           <Switch>
           
@@ -87,7 +89,8 @@ const App = () => {
             <PrivateRoute exact path="/inventory" component={Inventory} />
             <AdminRoute exact path="/admin" component={Admin} />
           </Switch>
-        </Router>
+        </HashRouter>
+        {/* </Router> */}
       </div>
     </LoginStatus.Provider>
     </ItemContext.Provider>
