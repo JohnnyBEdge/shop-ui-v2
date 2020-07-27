@@ -78,7 +78,9 @@ const App = () => {
       <LoginStatus.Provider value={{loginStatus, setLoginStatus}}>
       <div className="App">
         
-        <HashRouter basename={process.env.PUBLIC_URL}>
+        <HashRouter 
+        basename={process.env.PUBLIC_URL}
+        >
         {/* <Router> */}
           <Nav />
           <Switch>

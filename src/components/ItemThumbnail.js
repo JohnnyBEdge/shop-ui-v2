@@ -1,6 +1,5 @@
 import React from 'react';
 
-import Link from '@material-ui/core/Link';
 import { makeStyles } from '@material-ui/core/styles';
 
 
@@ -9,15 +8,13 @@ const ItemThumbNail = (props) => {
     const classes = useStyles();
 
     return (
-        <Link href="/item" item={props.item}>
-            <div className={classes.container}>
-                <div className={classes.imgContainer}>
-                    <img className={classes.img} src={props.item.img} alt={props.item.name} />
-                </div>
-                <h4 className={classes.itemName}>{props.item.name}</h4>
-                <p className={classes.itemPrice}>Price: ${props.item.price}</p>
+        <div className={classes.container}>
+            <div className={classes.imgContainer}>
+                <img className={classes.img} src={props.item.img} alt={props.item.name} />
             </div>
-        </Link>
+            <h4 className={classes.itemName}>{props.item.name}</h4>
+            <p className={classes.itemPrice}>Price: ${props.item.price}</p>
+        </div>
     )
 }
 const useStyles = makeStyles(() => ({

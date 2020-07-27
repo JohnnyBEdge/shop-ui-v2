@@ -1,6 +1,7 @@
 import React, {useContext} from 'react';
 import ItemThumbnail from '../components/ItemThumbnail';
 import {ItemContext} from '../context/item-context';
+import {Link} from "react-router-dom";
 
 
 import { makeStyles } from '@material-ui/core/styles';
@@ -16,9 +17,16 @@ const Inventory = () => {
     }
     // let { id } = useParams();
     const item = inventory.map((item) => {
-        return <a to={`/item/${item._id}` }onClick={() => handleSelected(item)} key={item._id}>
-                <ItemThumbnail item={item}/>
-            </a>
+        return <Link 
+                    to={{
+                        pathname:"/item" 
+                    }}
+                    onClick={() => handleSelected(item)} 
+                    key={item._id}>
+        {/* // <Link to={`item/${item._id}`} onClick={() => handleSelected(item)} key={item._id}> */}
+                <div><ItemThumbnail item={item}/></div>
+                
+            </Link>
     });
 
     const classes = useStyles();
