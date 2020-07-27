@@ -4,7 +4,7 @@ import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import {logout, isLoggedIn} from '../config/auth';
-import {Redirect} from 'react-router-dom';
+import {Redirect, Link} from 'react-router-dom';
 import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined';
 
 
@@ -49,7 +49,9 @@ const Avatar = () => {
                     aria-haspopup="true" 
                     onClick={handleClick} 
                     fontSize={'large'}/>
+                    <Link to="/cart">
                         <ShoppingCartOutlinedIcon />
+                    </Link>
                 <Menu
                     id="avatar-menu"
                     anchorEl={anchorEl}
