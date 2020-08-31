@@ -8,3 +8,5 @@ A fullstack, full CRUD project that should replicate a shopping website. This pr
 - Javascript
 - React 
 - JWT/OAuth
+- Express/NodeJs
+- MongoDB Atlas
